@@ -1,73 +1,59 @@
-# Welcome to your Lovable project
+# To-do App Frontend
 
-## Project info
+Este é o frontend da aplicação de lista de tarefas. Ele foi desenvolvido para ser uma interface de usuário intuitiva e responsiva que se comunica com uma API backend para gerenciar as tarefas.
 
-**URL**: https://lovable.dev/projects/7741c835-716a-4252-ab3b-319bca4438af
+## Tecnologias
 
-## How can I edit this code?
+* **React**: Biblioteca JavaScript para construção da interface de usuário.
+* **Vite**: Ferramenta de build rápida para o desenvolvimento.
+* **Axios**: Cliente HTTP para consumir a API do backend.
+* **TypeScript**: Adiciona tipagem estática para um código mais robusto e seguro.
+* **Design Patterns**: Aplicação de padrões como **Container/Presenter** para separar a lógica de negócios da interface.
+* **SOLID**: Princípios de design de software aplicados para um código limpo, coeso e escalável.
+* **Clean Code**: Boas práticas de programação para um código legível e fácil de manter.
 
-There are several ways of editing your application.
+## Como Rodar o Frontend
 
-**Use Lovable**
+Siga estas instruções para configurar e rodar o projeto em sua máquina local.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7741c835-716a-4252-ab3b-319bca4438af) and start prompting.
+### 1. Pré-requisitos
 
-Changes made via Lovable will be committed automatically to this repo.
+Certifique-se de ter o [Node.js](https://nodejs.org/) e o [npm](https://www.npmjs.com/) instalados em sua máquina.
 
-**Use your preferred IDE**
+### 2. Configuração do Ambiente
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1.  Clone o repositório do frontend:
+    ```bash
+    git clone [https://github.com/seu-usuario/seu-repositorio-front.git](https://github.com/seu-usuario/seu-repositorio-front.git)
+    cd seu-repositorio-front
+    ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2.  Instale as dependências:
+    ```bash
+    npm install
+    ```
 
-Follow these steps:
+3.  Crie um arquivo `.env` na raiz do projeto. Este arquivo será usado para armazenar a URL da API do seu backend.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+    ```env
+    VITE_API_URL="[https://seu-backend.onrender.com](https://seu-backend.onrender.com)"
+    ```
+    *Substitua a URL acima pela URL do seu backend no Render.*
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 3. Execução
 
-# Step 3: Install the necessary dependencies.
-npm i
+Para iniciar o servidor de desenvolvimento:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
 npm run dev
-```
+O projeto estará disponível em http://localhost:5173 (ou em outra porta, conforme configurado pelo Vite).
 
-**Edit a file directly in GitHub**
+Sobre a Arquitetura
+Este frontend foi desenvolvido com o objetivo de ser modular e de fácil manutenção, seguindo princípios de arquitetura de software:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Separação de Preocupações: A lógica da interface de usuário (components) é separada da lógica de negócios (hooks ou services).
 
-**Use GitHub Codespaces**
+Consumo da API: O uso do Axios centraliza as chamadas para a API, facilitando a manutenção e a reutilização de código.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/7741c835-716a-4252-ab3b-319bca4438af) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Boas Práticas: Princípios SOLID e Clean Code foram aplicados para garantir que cada componente e função tenha uma responsabilidade única e que o código seja legível e extensível.
+  ```
